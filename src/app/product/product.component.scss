@@ -1,0 +1,26 @@
+.main-rows {
+  margin-top: 60px !important;
+}
+.pointer-cursor {
+  cursor: pointer;
+  margin: 5px;
+}
+.delete-icon {
+  display: flex;
+  justify-content: center;
+}
+.table-actions-btns {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin-top: 90px;
+}
+.fa-plus-circle {
+  color: #02a7d9e0 !important;
+}
+.fa-trash-alt {
+  color: #f90909ad;
+}
+.fa-eye {
+  color: #1759ef;
+}

@@ -1,0 +1,82 @@
+<div class="container d-flex justify-content-end pdf-icon">
+  <span title="Generate PDF" (click)="generatePDF()">
+    <button class="btn btn-primary">
+      <i class="fas fa-file-pdf text-danger"></i> Download PDF
+    </button>
+  </span>
+</div>
+<div #pdfTable class="container-fluid mt-5" [formGroup]="addForm" id="pdfTable">
+  <div class="main-rows">
+    <div class="text-center">
+      <h4>Product Details</h4>
+    </div>
+    <div formArrayName="rows">
+      <div class="container-fluid">
+        <div
+          *ngFor="let row of rows.controls; let index = index"
+          [formGroupName]="index"
+        >
+          <div class="shadow-sm p-3 mb-5 bg-white rounded row data-card">
+            <div class="col-md-6 mb-3">
+              <label for="name" class="mb-2"><b>Product Name</b></label>
+              <input
+                type="text"
+                disabled
+                class="form-control"
+                formControlName="name"
+              />
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="description" class="mb-2">Product Description</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="description"
+                disabled
+              />
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="quanity" class="mb-2">Product Quantity</label>
+              <input
+                type="text"
+                disabled
+                formControlName="qty"
+                class="form-control"
+              />
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="price" class="mb-2">Product Price</label>
+              <input
+                type="text"
+                disabled
+                formControlName="price"
+                class="form-control"
+              />
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="subtotal" class="mb-2">Product Sub-Total</label>
+              <input
+                type="text"
+                disabled
+                class="form-control"
+                formControlName="subTotal"
+              />
+            </div>
+            <div class="col-md-12 mb-3">
+              <label for="inputEmail4" class="mb-2">Product Remarks</label>
+              <textarea
+                formControlName="remarks"
+                class="form-control"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12 mb-3">
+          <label for="remarks" class="mb-2">Final Remarks</label>
+          <textarea class="form-control"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
